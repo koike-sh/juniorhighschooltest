@@ -1,1 +1,1 @@
-# primaryschooltest
+# 中学校レベルの問題が出題されるテストです。
