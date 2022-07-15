@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>数学テスト</title>
+        <!-- <base href="/Users/shusakukoike/Documents/primarySchoolTest/"> -->
+        <link rel="stylesheet" href="../../questionCSS/questionMath/questionMath1.css">        
+    </head>
+
+    <body>
+        <header class="center">
+            <h1>問題1</h1>
+            <p>制限時間は10分です。</p>
+            <p>以下の問題を解いて解答欄に記入してください。</p>
+            <p>10+7×40=</p>
+            <form action="" method="GET">
+                <label for="text1" >解答欄</label>
+                <input type="text" id="text1" name="text1">
+                <input type="submit" value="解答" name="submit1" id="submit1">
+            </form>
+            <script>
+                let text1 = document.getElementById('text1');
+                let button1 = document.getElementById('submit1');
+                button1.addEventListener('click', (e) => {
+                    // デフォルトのイベントをキャンセル
+                    e.preventDefault();
+
+                    if(text1.value != 290) {
+                        alert('残念！！\n解答が間違っています！');
+                    } else {
+                        alert('正解です！！\n次の問題に進んで下さい！');
+                        location = '../questionMath2.html';
+                        location = 'questionMath2.html';
+                    }
+                });
+            </script>   
+
+
+        </header>
+        <footer class="bottom">
+            <small>&copy; 2022 Shusaku Koike</small>
+        </footer>
+    </body>
+</html>

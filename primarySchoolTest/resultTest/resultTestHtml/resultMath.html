@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>数学のテスト結果</title>
+        <!-- <base href="/Users/shusakukoike/Documents/primarySchoolTest/"> -->
+        <link rel="stylesheet" href="../../startTest/startTestCSS/startEnglish.css">     
+    </head>
+
+    <body>
+        <header class="center">
+            <h1>数学のテスト結果</h1>
+            <p id="score">テストのスコアは</p>
+            <p>お疲れ様でした。</p>
+            <script>
+                let element = document.getElementById('score');
+                url = 'http://35.77.147.48/primarySchoolTest/'
+                let ref = document.referrer;
+                console.log(ref);
+                console.log(url+'endTest/endTestHtml/endMath.html');
+                let finalScore = 0;
+                if (ref == url+'question/questionHtml/questionMath/questionMath1.html') {
+                    finalScore = 0;
+                } else if (ref == url+'question/questionHtml/questionMath/questionMath2.html') {
+                    finalScore = 1;
+                } else if (ref == url+'question/questionHtml/questionMath/questionMath3.html') {
+                    finalScore = 2;
+                } else if (ref == url+'endTest/endTestHtml/endMath.html'){
+                    finalScore = 3;
+                } else {
+                    finalScore = 0;
+                }
+                element.insertAdjacentHTML('beforeend', finalScore+"点です。");
+                console.log(finalScore);
+                
+            </script>   
+        </header>
+        <footer class="bottom">
+            <small>&copy; 2022 Shusaku Koike</small>
+        </footer>
+    </body>
+</html>

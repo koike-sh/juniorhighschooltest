@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>英語テスト</title>
+        <!-- <base href="/Users/shusakukoike/Documents/primarySchoolTest/"> -->
+        <link rel="stylesheet" href="../../startTest/startTestCSS/startEnglish.css">     
+    </head>
+
+    <body>
+        <header class="center">
+            <h1>英語テスト</h1>
+            <p>制限時間は10分です。</p>
+            <p>テスト内容は中学校で習う英語の問題です。</p>
+            <p>テスト終了後にスコアが表示されます。</p>
+            <p>準備ができたらテストを始めて下さい。</p>
+            <form action="../start.php" method="GET">
+                <button type="button" value="テストを始める" id="start">テストを始める</button>
+                <script>
+                    let btnHref = document.getElementById('start');
+                    btnHref.addEventListener('click', function(){
+                        location = '../../question/questionHtml/questionEnglish/questionEnglish1.html';
+                    });
+                </script>   
+            </form>
+        </header>
+        <footer class="bottom">
+            <small>&copy; 2022 Shusaku Koike</small>
+        </footer>
+    </body>
+</html>
