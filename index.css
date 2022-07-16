@@ -1,0 +1,33 @@
+.center {
+    text-align: center;
+    font-size: 120%;
+}
+.bottom {
+    width: 100%;
+    background-color: rgb(59, 162, 105);
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    position: absolute;
+    bottom: 0;
+}
+.flex span {
+    color: red;
+    font-size: 120%;
+}
+ul.flex {
+    display:flex;
+    width:100%;
+    list-style-type:none;
+    margin:0; padding:0;
+}
+ul.flex li {
+    width:70%;
+}
+ul.flex a {
+    display:block;
+    margin:10px; padding:10px; font-size:120%;
+    background-color: lightskyblue; color:black;
+    text-align:center;
+    text-decoration:none;
+}

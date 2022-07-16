@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>数学テスト</title>
+        <link rel="stylesheet" href="../../startTest/startTestCSS/startMath.css">     
+    </head>
+
+    <body>
+        <header class="center">
+            <h1>数学テスト</h1>
+            <p>各問題の制限時間は1分です。</p>
+            <p>範囲は中学校で習う数学です。</p>
+            <p>テスト終了後にスコアが表示されます。</p>
+            <p>準備ができたらテストを始めて下さい。</p>
+            <form action="../start.php" method="GET">
+                <button type="button" value="テストを始める" id="start">テストを始める</button>
+            </form>
+            <script>
+                let btnHref = document.getElementById('start');
+                btnHref.addEventListener('click', function(){
+                    location = '../../question/questionHtml/questionMath/questionMath1.html';
+                });
+            </script>   
+        </header>
+        <footer class="bottom">
+            <small>&copy; 2022 Shusaku Koike</small>
+        </footer>
+    </body>
+</html>

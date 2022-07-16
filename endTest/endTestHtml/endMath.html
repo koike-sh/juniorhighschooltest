@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>数学テスト</title>
+        <link rel="stylesheet" href="../../startTest/startTestCSS/startMath.css">     
+    </head>
+
+    <body>
+        <header class="center">
+            <h1>数学のテスト</h1>
+            <p>お疲れ様でした！<p>
+            <p>テストは以上で終了です。</p>
+            <br>
+            <button type="button" id="testResult">テストの結果</button>
+            <script>
+                let element = document.getElementById('testResult');
+                let result = element.addEventListener('click', function(){
+                    location = '../../resultTest/resultTestHtml/resultMath.html'
+                });
+            </script>  
+        </header>
+        <footer class="bottom">
+            <small>&copy; 2022 Shusaku Koike</small>
+        </footer>
+    </body>
+</html>
