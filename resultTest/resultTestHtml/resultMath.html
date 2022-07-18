@@ -11,12 +11,14 @@
         <header class="center">
             <h1>数学のテスト結果</h1>
             <p id="score">テストのスコアは</p>
+            <p id="evaluation"></p>
             <p>お疲れ様でした。</p>
             <br>
             <button type="button" id="home">教科選択画面に戻る</button>
             <script>
-                let element = document.getElementById('score');
-                url = 'http://35.77.147.48/primarySchoolTest/'
+                let score = document.getElementById('score');
+                let evaluation = document.getElementById('evaluation');
+                url = 'http://35.77.147.48/juniorhighschooltest/'
                 let ref = document.referrer;
                 // console.log(ref);
                 // console.log(url+'endTest/endTestHtml/endMath.html');
@@ -24,42 +26,42 @@
                 let comment = "";
                 if (ref == url+'question/questionHtml/questionMath/questionMath1.html') {
                     finalScore = 0;
-                    comment = "1次式の計算を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。1次式の計算を復習しましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath2.html') {
                     finalScore = 1;
-                    comment = "1次式の計算を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。1次式の計算を復習しましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath3.html') {
                     finalScore = 2;
-                    comment = "平方根を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。平方根の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath4.html') {
                     finalScore = 3;
-                    comment = "因数分解を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。因数分解の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath5.html') {
                     finalScore = 4;
-                    comment = "1次方程式を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。1次方程式の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath6.html') {
                     finalScore = 5;
-                    comment = "連立方程式を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。連立方程式の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath7.html') {
                     finalScore = 6;
-                    comment = "展開を復習しましょう。\n頑張りましょう";
+                    comment = "頑張りましょう。展開の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath8.html') {
                     finalScore = 7;
-                    comment = "惜しいです！\n比例の問題を復習しましょう。";
+                    comment = "惜しいです❗️比例の問題を復習しましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath9.html') {
                     finalScore = 8;
-                    comment = "惜しいです！\n1次関数を復習しましょう。";
+                    comment = "惜しいです❗️1次関数の復習をしましょう。";
                 } else if (ref == url+'question/questionHtml/questionMath/questionMath10.html') {
                     finalScore = 9;
-                    comment = "惜しいです！\n2次関数を復習しましょう。";
+                    comment = "惜しいです❗️2次関数の復習をしましょう。";
                 } else if (ref == url+'endTest/endTestHtml/endMath.html'){
                     finalScore = 10;
-                    comment = "満点です！\nおめでとうございます";
+                    comment = "満点です!おめでとうございます❗️❗️";
                 } else {
                     finalScore = 0;
                 }
-                element.insertAdjacentHTML('beforeend', finalScore+"点です。" +comment);
-                
+                score.insertAdjacentHTML('beforeend', finalScore+"点です。");
+                evaluation.insertAdjacentHTML('beforeend', comment);
                 let elements = document.getElementById('home');
                 elements.addEventListener('click', function(){
                     location = '../../index.html';
